@@ -1,0 +1,102 @@
+[
+  {
+    "id": "kos",
+    "name": "Kos",
+    "name_en": "Blackbird",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Common%20Blackbird%20by%20David%20Friel.jpg",
+    "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Common%20Blackbird%20song%20%28Turdus%20merula%29.ogg",
+    "image_page": "https://commons.wikimedia.org/wiki/File:Common_Blackbird_by_David_Friel.jpg",
+    "audio_page": "https://commons.wikimedia.org/wiki/File:Common_Blackbird_song_(Turdus_merula).ogg",
+    "credit": "Wikimedia Commons"
+  },
+  {
+    "id": "rudzik",
+    "name": "Rudzik",
+    "name_en": "Robin",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/European%20robin%20%28Erithacus%20rubecula%29.jpg",
+    "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/European%20Robin%20%28Erithacus%20rubecula%29%20%28W1CDR0001425%20BD16%29.ogg",
+    "image_page": "https://commons.wikimedia.org/wiki/File:European_robin_(Erithacus_rubecula).jpg",
+    "audio_page": "https://commons.wikimedia.org/wiki/File:European_Robin_(Erithacus_rubecula)_(W1CDR0001425_BD16).ogg",
+    "credit": "Wikimedia Commons"
+  },
+  {
+    "id": "zieba",
+    "name": "Zięba",
+    "name_en": "Chaffinch",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Fringilla%20coelebs%20male.jpg",
+    "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Fringilla%20coelebs%20song.ogg",
+    "image_page": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_male.jpg",
+    "audio_page": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_song.ogg",
+    "credit": "Wikimedia Commons"
+  },
+  {
+    "id": "bogatka",
+    "name": "Bogatka",
+    "name_en": "Great Tit",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Great%20tit%20side-on.jpg",
+    "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Great%20Tit%20%28Parus%20major%29%20%28W1CDR0001393%20BD1%29.ogg",
+    "image_page": "https://commons.wikimedia.org/wiki/File:Great_tit_side-on.jpg",
+    "audio_page": "https://commons.wikimedia.org/wiki/File:Great_Tit_(Parus_major)_(W1CDR0001393_BD1).ogg",
+    "credit": "Wikimedia Commons"
+  },
+  {
+    "id": "modraszka",
+    "name": "Modraszka",
+    "name_en": "Blue Tit",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Eurasian%20blue%20tit%202022%2004%2030.jpg",
+    "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cyanistes%20caeruleus%20-%20Eurasian%20Blue%20Tit%20XC125793.ogg",
+    "image_page": "https://commons.wikimedia.org/wiki/File:Eurasian_blue_tit_2022_04_30.jpg",
+    "audio_page": "https://commons.wikimedia.org/wiki/File:Cyanistes_caeruleus_-_Eurasian_Blue_Tit_XC125793.ogg",
+    "credit": "Wikimedia Commons"
+  },
+  {
+    "id": "kowalik",
+    "name": "Kowalik",
+    "name_en": "Nuthatch",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sitta%20europaea%20wildlife%203.jpg",
+    "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sitta%20europaea.ogg",
+    "image_page": "https://commons.wikimedia.org/wiki/File:Sitta_europaea_wildlife_3.jpg",
+    "audio_page": "https://commons.wikimedia.org/wiki/File:Sitta_europaea.ogg",
+    "credit": "Wikimedia Commons"
+  },
+  {
+    "id": "sojka",
+    "name": "Sójka",
+    "name_en": "Jay",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Garrulus%20glandarius%201%20Luc%20Viatour.jpg",
+    "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/DM550GarrulusGlandariusCallSlovakia.ogg",
+    "image_page": "https://commons.wikimedia.org/wiki/File:Garrulus_glandarius_1_Luc_Viatour.jpg",
+    "audio_page": "https://commons.wikimedia.org/wiki/File:DM550GarrulusGlandariusCallSlovakia.ogg",
+    "credit": "Wikimedia Commons"
+  },
+  {
+    "id": "dzieciol-duzy",
+    "name": "Dzięcioł duży",
+    "name_en": "Great Spotted Woodpecker",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dendrocopos%20major.jpg",
+    "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dendrocopos%20major.ogg",
+    "image_page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major.jpg",
+    "audio_page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major.ogg",
+    "credit": "Wikimedia Commons"
+  },
+  {
+    "id": "dzieciol-czarny",
+    "name": "Dzięcioł czarny",
+    "name_en": "Black Woodpecker",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dryocopus%20martius%20Sopot%201.jpg",
+    "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dryocopus%20martius%20spring%20call%20kuikuikuikui.ogg",
+    "image_page": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius_Sopot_1.jpg",
+    "audio_page": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius_spring_call_kuikuikuikui.ogg",
+    "credit": "Wikimedia Commons"
+  },
+  {
+    "id": "wilga",
+    "name": "Wilga",
+    "name_en": "Golden Oriole",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Oriolus%20oriolus%20Warsaw.jpg",
+    "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Golden%20oriole%20song.ogg",
+    "image_page": "https://commons.wikimedia.org/wiki/File:Oriolus_oriolus_Warsaw.jpg",
+    "audio_page": "https://commons.wikimedia.org/wiki/File:Golden_oriole_song.ogg",
+    "credit": "Wikimedia Commons"
+  }
+]
