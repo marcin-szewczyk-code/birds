@@ -125,12 +125,15 @@ function renderRegionView() {
 }
 
 function showDetails(bird) {
+  const sourceLabel = lang === 'pl' ? 'Źródło:' : 'Source:';
+
   details.innerHTML = `
     <div class="details-card">
       <h2>${escapeHtml(getBirdName(bird))}</h2>
       <audio controls src="${bird.audio_url}"></audio>
       <img src="${bird.image_url}" alt="">
       <div class="credits">
+        <span class="credits-label">${sourceLabel}</span>
         <a href="${bird.image_page}" target="_blank" rel="noopener noreferrer">image</a> ·
         <a href="${bird.audio_page}" target="_blank" rel="noopener noreferrer">audio</a>
       </div>
