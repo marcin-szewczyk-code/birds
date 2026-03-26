@@ -33,6 +33,7 @@ const i18n = {
   }
 };
 
+// UI teksty
 document.getElementById("intro").textContent = text[lang].intro;
 document.getElementById("placeholder").textContent = text[lang].placeholder;
 
@@ -41,10 +42,16 @@ document.getElementById("langSwitch").innerHTML =
     ? '<a href="./">EN</a> | <span class="active">PL</span>'
     : '<span class="active">EN</span> | <a href="?lang=pl">PL</a>';
 
+// 🔧 KLUCZOWE: źródło danych
+function getDataUrl() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('data') || './data/default.json';
+}
+
 let birds = [];
 let activeId = '';
 
-fetch('./data/default.json')
+fetch(getDataUrl())
   .then((res) => {
     if (!res.ok) throw new Error(i18n[lang].loadError);
     return res.json();
