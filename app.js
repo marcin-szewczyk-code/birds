@@ -82,7 +82,17 @@ function getDataUrl() {
 }
 
 function initTexts() {
+  const pageTitle = document.getElementById('pageTitle');
+
   titleEl.textContent = 'MyBirds';
+
+  if (pageTitle) {
+    pageTitle.textContent =
+      lang === 'pl'
+        ? 'MyBirds – Nauka Ptaków'
+        : 'MyBirds – Bird Learning';
+  }
+
   introEl.textContent = text[lang].intro;
   placeholderEl.textContent = text[lang].choose;
 }
