@@ -84,7 +84,10 @@ function getDataUrl() {
 function initTexts() {
   const pageTitle = document.getElementById('pageTitle');
 
-  titleEl.textContent = 'MyBirds';
+  titleEl.textContent =
+  lang === 'pl'
+    ? 'MyBirds – Nauka Ptaków'
+    : 'MyBirds – Bird Learning';
 
   if (pageTitle) {
     pageTitle.textContent =
