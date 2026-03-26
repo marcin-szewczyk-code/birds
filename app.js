@@ -1,11 +1,22 @@
 const grid = document.getElementById('grid');
 const details = document.getElementById('details');
 
-const lang = window.APP_LANG === 'en' ? 'en' : 'pl';
+const lang = window.APP_LANG === 'pl' ? 'pl' : 'en';
+
+const text = {
+  pl: {
+    intro: 'Kilka ptaków pod ręką do nauki. Kliknij kafelek.',
+    placeholder: 'Wybierz ptaka z listy.'
+  },
+  en: {
+    intro: 'A few birds at hand for learning. Click a tile.',
+    placeholder: 'Choose a bird from the list.'
+  }
+};
 
 const i18n = {
   pl: {
-    loadError: 'Nie udało się wczytać data.json',
+    loadError: 'Nie udało się wczytać danych',
     browserNoAudio: 'Twoja przeglądarka nie obsługuje audio.',
     source: 'Źródło',
     imageSource: 'źródło zdjęcia',
@@ -13,7 +24,7 @@ const i18n = {
     defaultCredit: 'Wikimedia Commons'
   },
   en: {
-    loadError: 'Could not load data.json',
+    loadError: 'Could not load data',
     browserNoAudio: 'Your browser does not support audio.',
     source: 'Source',
     imageSource: 'image source',
@@ -22,10 +33,18 @@ const i18n = {
   }
 };
 
+document.getElementById("intro").textContent = text[lang].intro;
+document.getElementById("placeholder").textContent = text[lang].placeholder;
+
+document.getElementById("langSwitch").innerHTML =
+  lang === "pl"
+    ? '<a href="./">EN</a> | <span class="active">PL</span>'
+    : '<span class="active">EN</span> | <a href="?lang=pl">PL</a>';
+
 let birds = [];
 let activeId = '';
 
-fetch('./data.json')
+fetch('./data/default.json')
   .then((res) => {
     if (!res.ok) throw new Error(i18n[lang].loadError);
     return res.json();
@@ -36,7 +55,7 @@ fetch('./data.json')
   })
   .catch((err) => {
     details.classList.remove('empty');
-    details.innerHTML = `<div class="placeholder">Błąd: ${escapeHtml(err.message)}</div>`;
+    details.innerHTML = `<div class="placeholder">Error: ${escapeHtml(err.message)}</div>`;
   });
 
 function getBirdName(bird) {
