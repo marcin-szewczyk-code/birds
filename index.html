@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <title id="pageTitle">MyBirds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    if (location.hostname === "marcinszewczyk.net" && location.pathname.startsWith("/birds")) {
+      window.location.replace("https://birds.marcinszewczyk.net/");
+    }
+  </script>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
