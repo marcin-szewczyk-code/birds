@@ -171,12 +171,25 @@ function showDetails(bird) {
   `;
 }
 
+function loadJson(url) {
+  return fetch(url).then(r => {
+    if (!r.ok) throw new Error('HTTP error');
+    return r.json();
+  });
+}
+
 function init() {
   renderLangSwitch();
   initTexts();
 
-  fetch(getDataUrl())
-    .then(r => r.json())
+  const remoteUrl = getDataUrl();
+  const localUrl = 'data/birds.json';
+
+  loadJson(remoteUrl)
+    .catch(err => {
+      console.warn('Remote JSON failed, fallback to local:', err);
+      return loadJson(localUrl);
+    })
     .then(json => {
       data = json;
       datasets = data.datasets || [];
@@ -189,7 +202,7 @@ function init() {
       loadDataset(currentDataset.id);
     })
     .catch(err => {
-      console.error(err);
+      console.error('Both remote and local JSON failed:', err);
       grid.innerHTML = '<p>Cannot load data.</p>';
     });
 }
