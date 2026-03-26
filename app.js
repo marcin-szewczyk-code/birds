@@ -9,23 +9,25 @@ const placeholderEl = document.getElementById('placeholder');
 const langSwitch = document.getElementById('langSwitch');
 
 let activeBirdId = null;
+let usedFallback = false;
 
-function renderRegionView() {
-  const mapImage = currentDataset?.map?.image || '';
-  const mapLicense = data?.map_base?.license || '';
+let data = null;
+let datasets = [];
+let currentDataset = null;
+let birds = [];
 
-  if (!mapImage) {
-    details.innerHTML = `<p>${text[lang].choose}</p>`;
-    return;
+const text = {
+  pl: {
+    intro: 'Wybierz region, a następnie kliknij ptaka.',
+    choose: 'Wybierz ptaka z listy.',
+    fallback: 'Użyto domyślnego zestawu danych.'
+  },
+  en: {
+    intro: 'Select a region, then click a bird.',
+    choose: 'Select a bird from the list.',
+    fallback: 'Using default dataset.'
   }
-
-  details.innerHTML = `
-    <div class="details-card">
-      <img src="${mapImage}" alt="">
-      <div class="map-credit">${escapeHtml(mapLicense)}</div>
-    </div>
-  `;
-}
+};
 
 function escapeHtml(str) {
   return String(str)
@@ -59,8 +61,19 @@ function renderLangSwitch() {
   const toPl = document.getElementById('toPl');
   const toEn = document.getElementById('toEn');
 
-  if (toPl) toPl.onclick = () => setLang('pl');
-  if (toEn) toEn.onclick = () => setLang('en');
+  if (toPl) {
+    toPl.onclick = (e) => {
+      e.preventDefault();
+      setLang('pl');
+    };
+  }
+
+  if (toEn) {
+    toEn.onclick = (e) => {
+      e.preventDefault();
+      setLang('en');
+    };
+  }
 }
 
 function getDataUrl() {
@@ -68,60 +81,61 @@ function getDataUrl() {
   return params.get('data') || 'data/birds.json';
 }
 
-let data = null;
-let datasets = [];
-let currentDataset = null;
-let birds = [];
-
-const text = {
-  pl: {
-    intro: 'Kilka ptaków pod ręką do nauki. Wybierz region, a następnie kliknij kafelek.',
-    choose: 'Wybierz ptaka z listy.'
-  },
-  en: {
-    intro: 'A few birds for quick learning. Select a region, then click a bird.',
-    choose: 'Select a bird from the list.'
-  }
-};
-
 function initTexts() {
   titleEl.textContent = 'MyBirds';
   introEl.textContent = text[lang].intro;
   placeholderEl.textContent = text[lang].choose;
 }
 
-function initDatasetSelect() {
-  datasetSelect.innerHTML = '';
-
-  datasets.forEach(ds => {
-    const opt = document.createElement('option');
-    opt.value = ds.id;
-    opt.textContent = lang === 'pl' ? ds.name_pl : ds.name_en;
-    datasetSelect.appendChild(opt);
-  });
-
-  datasetSelect.value = currentDataset.id;
-
-  datasetSelect.addEventListener('change', () => {
-    loadDataset(datasetSelect.value);
-  });
-}
-
-function loadDataset(id) {
-  currentDataset = datasets.find(d => d.id === id);
-  birds = currentDataset.birds || [];
-  activeBirdId = null;
-
-  renderDatasetDescription();
-  renderGrid();
-  renderRegionView();
+function getBirdName(bird) {
+  return lang === 'pl' ? bird.name_pl : bird.name_en;
 }
 
 function renderDatasetDescription() {
-  datasetDesc.textContent =
+  const description =
     lang === 'pl'
       ? currentDataset.description_pl
       : currentDataset.description_en;
+
+  if (usedFallback) {
+    datasetDesc.innerHTML =
+      `<span class="fallback-badge">${escapeHtml(text[lang].fallback)}</span> ` +
+      escapeHtml(description);
+    return;
+  }
+
+  datasetDesc.textContent = description;
+}
+
+function renderRegionView() {
+  const mapImage = currentDataset?.map?.image || '';
+  const mapLicense = data?.map_base?.license || '';
+
+  if (!mapImage) {
+    details.innerHTML = `<p>${text[lang].choose}</p>`;
+    return;
+  }
+
+  details.innerHTML = `
+    <div class="details-card">
+      <img src="${mapImage}" alt="">
+      <div class="map-credit">${escapeHtml(mapLicense)}</div>
+    </div>
+  `;
+}
+
+function showDetails(bird) {
+  details.innerHTML = `
+    <div class="details-card">
+      <h2>${escapeHtml(getBirdName(bird))}</h2>
+      <audio controls src="${bird.audio_url}"></audio>
+      <img src="${bird.image_url}" alt="">
+      <div class="credits">
+        <a href="${bird.image_page}" target="_blank" rel="noopener noreferrer">image</a> ·
+        <a href="${bird.audio_page}" target="_blank" rel="noopener noreferrer">audio</a>
+      </div>
+    </div>
+  `;
 }
 
 function renderGrid() {
@@ -153,27 +167,38 @@ function renderGrid() {
   });
 }
 
-function getBirdName(bird) {
-  return lang === 'pl' ? bird.name_pl : bird.name_en;
+function initDatasetSelect() {
+  datasetSelect.innerHTML = '';
+
+  datasets.forEach(ds => {
+    const opt = document.createElement('option');
+    opt.value = ds.id;
+    opt.textContent = lang === 'pl' ? ds.name_pl : ds.name_en;
+    datasetSelect.appendChild(opt);
+  });
+
+  datasetSelect.value = currentDataset.id;
+
+  datasetSelect.onchange = () => {
+    loadDataset(datasetSelect.value);
+  };
 }
 
-function showDetails(bird) {
-  details.innerHTML = `
-    <div class="details-card">
-      <h2>${escapeHtml(getBirdName(bird))}</h2>
-      <audio controls src="${bird.audio_url}"></audio>
-      <img src="${bird.image_url}" alt="">
-      <div class="credits">
-        <a href="${bird.image_page}" target="_blank" rel="noopener noreferrer">image</a> ·
-        <a href="${bird.audio_page}" target="_blank" rel="noopener noreferrer">audio</a>
-      </div>
-    </div>
-  `;
+function loadDataset(id) {
+  currentDataset = datasets.find(d => d.id === id);
+  birds = currentDataset?.birds || [];
+  activeBirdId = null;
+
+  renderDatasetDescription();
+  renderGrid();
+  renderRegionView();
 }
 
 function loadJson(url) {
   return fetch(url).then(r => {
-    if (!r.ok) throw new Error('HTTP error');
+    if (!r.ok) {
+      throw new Error(`HTTP ${r.status}`);
+    }
     return r.json();
   });
 }
@@ -185,32 +210,28 @@ function init() {
   const remoteUrl = getDataUrl();
   const localUrl = 'data/birds.json';
 
-loadJson(remoteUrl)
-  .catch(err => {
-    console.warn('Remote JSON failed, fallback to local:', err);
+  loadJson(remoteUrl)
+    .catch(err => {
+      console.warn('Remote JSON failed, fallback to local:', err);
+      usedFallback = true;
+      return loadJson(localUrl);
+    })
+    .then(json => {
+      data = json;
+      datasets = data.datasets || [];
 
-    datasetDesc.textContent =
-      lang === 'pl'
-        ? 'Użyto domyślnego zestawu danych.'
-        : 'Using default dataset.';
+      const defaultId = data.default_dataset_id;
+      currentDataset =
+        datasets.find(d => d.id === defaultId) || datasets[0];
 
-    return loadJson(localUrl);
-  })
-  .then(json => {
-    data = json;
-    datasets = data.datasets || [];
-
-    const defaultId = data.default_dataset_id;
-    currentDataset =
-      datasets.find(d => d.id === defaultId) || datasets[0];
-
-    initDatasetSelect();
-    loadDataset(currentDataset.id);
-  })
-  .catch(err => {
-    console.error('Both remote and local JSON failed:', err);
-    grid.innerHTML = '<p>Cannot load data.</p>';
-  });
+      initDatasetSelect();
+      loadDataset(currentDataset.id);
+    })
+    .catch(err => {
+      console.error('Both remote and local JSON failed:', err);
+      grid.innerHTML = `<p>${text[lang].choose}</p>`;
+      details.innerHTML = '<p>Cannot load data.</p>';
+    });
 }
 
 init();
