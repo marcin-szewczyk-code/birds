@@ -63,21 +63,7 @@
           "image_page": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_male.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_song.ogg",
           "credit": "Wikimedia Commons"
-        }
-      ]
-    },
-    {
-      "id": "polesie",
-      "name_pl": "Polesie",
-      "name_en": "Polesie",
-      "description_pl": "Zestaw ptaków dla Polesia.",
-      "description_en": "A bird set for Polesia.",
-      "map": {
-        "image": "maps/polesie.png",
-        "lat": 51.455278,
-        "lon": 23.173333
-      },
-      "birds": [
+        },
         {
           "id": "bogatka",
           "name_pl": "Bogatka",
@@ -111,6 +97,19 @@
       ]
     },
     {
+      "id": "polesie",
+      "name_pl": "Polesie",
+      "name_en": "Polesie",
+      "description_pl": "Zestaw ptaków dla Polesia.",
+      "description_en": "A bird set for Polesia.",
+      "map": {
+        "image": "maps/polesie.png",
+        "lat": 51.455278,
+        "lon": 23.173333
+      },
+      "birds": []
+    },
+    {
       "id": "beskid-niski",
       "name_pl": "Beskid Niski",
       "name_en": "Beskid Niski",
@@ -123,13 +122,63 @@
       },
       "birds": [
         {
-          "id": "sojka",
-          "name_pl": "Sójka",
-          "name_en": "Jay",
-          "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Garrulus%20glandarius%201%20Luc%20Viatour.jpg",
-          "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/DM550GarrulusGlandariusCallSlovakia.ogg",
-          "image_page": "https://commons.wikimedia.org/wiki/File:Garrulus_glandarius_1_Luc_Viatour.jpg",
-          "audio_page": "https://commons.wikimedia.org/wiki/File:DM550GarrulusGlandariusCallSlovakia.ogg",
+          "id": "orlik-krzykliwy",
+          "name_pl": "Orlik krzykliwy",
+          "name_en": "Lesser Spotted Eagle",
+          "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Clanga%20pomarina.jpg",
+          "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Clanga%20pomarina%20call.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Clanga_pomarina.jpg",
+          "audio_page": "https://commons.wikimedia.org/wiki/File:Clanga_pomarina_call.ogg",
+          "credit": "Wikimedia Commons"
+        },
+        {
+          "id": "myszolow",
+          "name_pl": "Myszołów",
+          "name_en": "Common Buzzard",
+          "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Buteo%20buteo.jpg",
+          "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Buteo%20buteo%20call.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Buteo_buteo.jpg",
+          "audio_page": "https://commons.wikimedia.org/wiki/File:Buteo_buteo_call.ogg",
+          "credit": "Wikimedia Commons"
+        },
+        {
+          "id": "puszczyk-uralski",
+          "name_pl": "Puszczyk uralski",
+          "name_en": "Ural Owl",
+          "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Strix%20uralensis.jpg",
+          "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Strix%20uralensis%20call.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Strix_uralensis.jpg",
+          "audio_page": "https://commons.wikimedia.org/wiki/File:Strix_uralensis_call.ogg",
+          "credit": "Wikimedia Commons"
+        },
+        {
+          "id": "puchacz",
+          "name_pl": "Puchacz",
+          "name_en": "Eurasian Eagle-Owl",
+          "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bubo%20bubo.jpg",
+          "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bubo%20bubo%20call.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Bubo_bubo.jpg",
+          "audio_page": "https://commons.wikimedia.org/wiki/File:Bubo_bubo_call.ogg",
+          "credit": "Wikimedia Commons"
+        },
+        {
+          "id": "bocian-czarny",
+          "name_pl": "Bocian czarny",
+          "name_en": "Black Stork",
+          "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ciconia%20nigra.jpg",
+          "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ciconia%20nigra%20call.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Ciconia_nigra.jpg",
+          "audio_page": "https://commons.wikimedia.org/wiki/File:Ciconia_nigra_call.ogg",
+          "credit": "Wikimedia Commons"
+        },
+        {
+          "id": "gil",
+          "name_pl": "Gil",
+          "name_en": "Bullfinch",
+          "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pyrrhula%20pyrrhula.jpg",
+          "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pyrrhula%20pyrrhula%20call.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Pyrrhula_pyrrhula.jpg",
+          "audio_page": "https://commons.wikimedia.org/wiki/File:Pyrrhula_pyrrhula_call.ogg",
           "credit": "Wikimedia Commons"
         },
         {
@@ -143,23 +192,33 @@
           "credit": "Wikimedia Commons"
         },
         {
-          "id": "dzieciol-czarny",
-          "name_pl": "Dzięcioł czarny",
-          "name_en": "Black Woodpecker",
-          "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dryocopus%20martius%20Sopot%201.jpg",
-          "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dryocopus%20martius%20spring%20call%20kuikuikuikui.ogg",
-          "image_page": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius_Sopot_1.jpg",
-          "audio_page": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius_spring_call_kuikuikuikui.ogg",
+          "id": "dzieciol-zielony",
+          "name_pl": "Dzięcioł zielony",
+          "name_en": "European Green Woodpecker",
+          "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Picus%20viridis.jpg",
+          "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Picus%20viridis%20call.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Picus_viridis.jpg",
+          "audio_page": "https://commons.wikimedia.org/wiki/File:Picus_viridis_call.ogg",
           "credit": "Wikimedia Commons"
         },
         {
-          "id": "wilga",
-          "name_pl": "Wilga",
-          "name_en": "Golden Oriole",
-          "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Oriolus%20oriolus%20Warsaw.jpg",
-          "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Golden%20oriole%20song.ogg",
-          "image_page": "https://commons.wikimedia.org/wiki/File:Oriolus_oriolus_Warsaw.jpg",
-          "audio_page": "https://commons.wikimedia.org/wiki/File:Golden_oriole_song.ogg",
+          "id": "derkacz",
+          "name_pl": "Derkacz",
+          "name_en": "Corn Crake",
+          "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Crex%20crex.jpg",
+          "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Crex%20crex%20call.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Crex_crex.jpg",
+          "audio_page": "https://commons.wikimedia.org/wiki/File:Crex_crex_call.ogg",
+          "credit": "Wikimedia Commons"
+        },
+        {
+          "id": "dzierzba-gasiorek",
+          "name_pl": "Dzierzba gąsiorek",
+          "name_en": "Red-backed Shrike",
+          "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lanius%20collurio.jpg",
+          "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lanius%20collurio%20call.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Lanius_collurio.jpg",
+          "audio_page": "https://commons.wikimedia.org/wiki/File:Lanius_collurio_call.ogg",
           "credit": "Wikimedia Commons"
         }
       ]
