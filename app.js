@@ -84,14 +84,23 @@ function getDataUrl() {
 function initTexts() {
   const pageTitle = document.getElementById('pageTitle');
 
-  titleEl.textContent = 'MyBirds';
+  const fullTitle =
+    lang === 'pl'
+      ? 'MyBirds – Nauka Ptaków'
+      : 'MyBirds – Bird Learning';
 
+  // <title>
   if (pageTitle) {
-    pageTitle.textContent =
-      lang === 'pl'
-        ? 'MyBirds – Nauka Ptaków'
-        : 'MyBirds – Bird Learning';
+    pageTitle.textContent = fullTitle;
   }
+
+  // <h1>
+  titleEl.textContent = fullTitle;
+
+  // reszta
+  introEl.textContent = text[lang].intro;
+  placeholderEl.textContent = text[lang].choose;
+}
 
   introEl.textContent = text[lang].intro;
   placeholderEl.textContent = text[lang].choose;
