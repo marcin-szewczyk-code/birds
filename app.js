@@ -185,26 +185,32 @@ function init() {
   const remoteUrl = getDataUrl();
   const localUrl = 'data/birds.json';
 
-  loadJson(remoteUrl)
-    .catch(err => {
-      console.warn('Remote JSON failed, fallback to local:', err);
-      return loadJson(localUrl);
-    })
-    .then(json => {
-      data = json;
-      datasets = data.datasets || [];
+loadJson(remoteUrl)
+  .catch(err => {
+    console.warn('Remote JSON failed, fallback to local:', err);
 
-      const defaultId = data.default_dataset_id;
-      currentDataset =
-        datasets.find(d => d.id === defaultId) || datasets[0];
+    datasetDesc.textContent =
+      lang === 'pl'
+        ? 'Użyto domyślnego zestawu danych.'
+        : 'Using default dataset.';
 
-      initDatasetSelect();
-      loadDataset(currentDataset.id);
-    })
-    .catch(err => {
-      console.error('Both remote and local JSON failed:', err);
-      grid.innerHTML = '<p>Cannot load data.</p>';
-    });
+    return loadJson(localUrl);
+  })
+  .then(json => {
+    data = json;
+    datasets = data.datasets || [];
+
+    const defaultId = data.default_dataset_id;
+    currentDataset =
+      datasets.find(d => d.id === defaultId) || datasets[0];
+
+    initDatasetSelect();
+    loadDataset(currentDataset.id);
+  })
+  .catch(err => {
+    console.error('Both remote and local JSON failed:', err);
+    grid.innerHTML = '<p>Cannot load data.</p>';
+  });
 }
 
 init();
