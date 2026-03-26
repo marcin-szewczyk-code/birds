@@ -1,135 +1,197 @@
 const grid = document.getElementById('grid');
 const details = document.getElementById('details');
+const datasetSelect = document.getElementById('datasetSelect');
+const datasetDesc = document.getElementById('datasetDesc');
 
-const lang = window.APP_LANG === 'pl' ? 'pl' : 'en';
+const titleEl = document.getElementById('title');
+const introEl = document.getElementById('intro');
+const placeholderEl = document.getElementById('placeholder');
+const langSwitch = document.getElementById('langSwitch');
+
+let activeBirdId = null;
+
+function renderRegionView() {
+  const mapImage = currentDataset?.map?.image || '';
+  const mapLicense = data?.map_base?.license || '';
+
+  if (!mapImage) {
+    details.innerHTML = `<p>${text[lang].choose}</p>`;
+    return;
+  }
+
+  details.innerHTML = `
+    <div class="details-card">
+      <img src="${mapImage}" alt="">
+      <div class="map-credit">${escapeHtml(mapLicense)}</div>
+    </div>
+  `;
+}
+
+function escapeHtml(str) {
+  return String(str)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
+function getLang() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('lang') === 'pl' ? 'pl' : 'en';
+}
+
+let lang = getLang();
+
+function setLang(newLang) {
+  const params = new URLSearchParams(window.location.search);
+  params.set('lang', newLang);
+  window.location.search = params.toString();
+}
+
+function renderLangSwitch() {
+  if (lang === 'pl') {
+    langSwitch.innerHTML = `<span>PL</span> | <a href="#" id="toEn">EN</a>`;
+  } else {
+    langSwitch.innerHTML = `<a href="#" id="toPl">PL</a> | <span>EN</span>`;
+  }
+
+  const toPl = document.getElementById('toPl');
+  const toEn = document.getElementById('toEn');
+
+  if (toPl) toPl.onclick = () => setLang('pl');
+  if (toEn) toEn.onclick = () => setLang('en');
+}
+
+function getDataUrl() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('data') || 'data/birds.json';
+}
+
+let data = null;
+let datasets = [];
+let currentDataset = null;
+let birds = [];
 
 const text = {
   pl: {
-    intro: 'Kilka ptaków pod ręką do nauki. Kliknij kafelek.',
-    placeholder: 'Wybierz ptaka z listy.'
+    intro: 'Kilka ptaków pod ręką do nauki. Wybierz region, a następnie kliknij kafelek.',
+    choose: 'Wybierz ptaka z listy.'
   },
   en: {
-    intro: 'A few birds at hand for learning. Click a tile.',
-    placeholder: 'Choose a bird from the list.'
+    intro: 'A few birds for quick learning. Select a region, then click a bird.',
+    choose: 'Select a bird from the list.'
   }
 };
 
-const i18n = {
-  pl: {
-    loadError: 'Nie udało się wczytać danych',
-    browserNoAudio: 'Twoja przeglądarka nie obsługuje audio.',
-    source: 'Źródło',
-    imageSource: 'źródło zdjęcia',
-    audioSource: 'źródło dźwięku',
-    defaultCredit: 'Wikimedia Commons'
-  },
-  en: {
-    loadError: 'Could not load data',
-    browserNoAudio: 'Your browser does not support audio.',
-    source: 'Source',
-    imageSource: 'image source',
-    audioSource: 'audio source',
-    defaultCredit: 'Wikimedia Commons'
-  }
-};
-
-// UI teksty
-document.getElementById("intro").textContent = text[lang].intro;
-document.getElementById("placeholder").textContent = text[lang].placeholder;
-
-document.getElementById("langSwitch").innerHTML =
-  lang === "pl"
-    ? '<a href="./">EN</a> | <span class="active">PL</span>'
-    : '<span class="active">EN</span> | <a href="?lang=pl">PL</a>';
-
-// 🔧 KLUCZOWE: źródło danych
-function getDataUrl() {
-  const params = new URLSearchParams(window.location.search);
-  return params.get('data') || './data/default.json';
+function initTexts() {
+  titleEl.textContent = 'MyBirds';
+  introEl.textContent = text[lang].intro;
+  placeholderEl.textContent = text[lang].choose;
 }
 
-let birds = [];
-let activeId = '';
+function initDatasetSelect() {
+  datasetSelect.innerHTML = '';
 
-fetch(getDataUrl())
-  .then((res) => {
-    if (!res.ok) throw new Error(i18n[lang].loadError);
-    return res.json();
-  })
-  .then((data) => {
-    birds = Array.isArray(data) ? data : [];
-    renderGrid();
-  })
-  .catch((err) => {
-    details.classList.remove('empty');
-    details.innerHTML = `<div class="placeholder">Error: ${escapeHtml(err.message)}</div>`;
+  datasets.forEach(ds => {
+    const opt = document.createElement('option');
+    opt.value = ds.id;
+    opt.textContent = lang === 'pl' ? ds.name_pl : ds.name_en;
+    datasetSelect.appendChild(opt);
   });
 
-function getBirdName(bird) {
-  if (lang === 'en') {
-    return bird.name_en || bird.name;
-  }
-  return bird.name || bird.name_en || '';
+  datasetSelect.value = currentDataset.id;
+
+  datasetSelect.addEventListener('change', () => {
+    loadDataset(datasetSelect.value);
+  });
+}
+
+function loadDataset(id) {
+  currentDataset = datasets.find(d => d.id === id);
+  birds = currentDataset.birds || [];
+  activeBirdId = null;
+
+  renderDatasetDescription();
+  renderGrid();
+  renderRegionView();
+}
+
+function renderDatasetDescription() {
+  datasetDesc.textContent =
+    lang === 'pl'
+      ? currentDataset.description_pl
+      : currentDataset.description_en;
 }
 
 function renderGrid() {
   grid.innerHTML = '';
 
-  birds.forEach((bird) => {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'tile';
-    button.textContent = getBirdName(bird);
-    button.dataset.id = bird.id;
-    button.addEventListener('click', () => showBird(bird.id));
-    grid.appendChild(button);
+  birds.forEach(bird => {
+    const btn = document.createElement('button');
+    btn.className = 'tile';
+    btn.textContent = getBirdName(bird);
+
+    if (bird.id === activeBirdId) {
+      btn.classList.add('active');
+    }
+
+    btn.onclick = () => {
+      if (activeBirdId === bird.id) {
+        activeBirdId = null;
+        renderGrid();
+        renderRegionView();
+        return;
+      }
+
+      activeBirdId = bird.id;
+      renderGrid();
+      showDetails(bird);
+    };
+
+    grid.appendChild(btn);
   });
 }
 
-function showBird(id) {
-  activeId = id;
-  const bird = birds.find((item) => item.id === id);
-  if (!bird) return;
+function getBirdName(bird) {
+  return lang === 'pl' ? bird.name_pl : bird.name_en;
+}
 
-  [...grid.querySelectorAll('.tile')].forEach((tile) => {
-    tile.classList.toggle('active', tile.dataset.id === bird.id);
-  });
-
-  const birdName = getBirdName(bird);
-
-  details.classList.remove('empty');
+function showDetails(bird) {
   details.innerHTML = `
     <div class="details-card">
-      <h2>${escapeHtml(birdName)}</h2>
-
-      <audio class="audio-player" controls preload="none">
-        <source src="${escapeAttr(bird.audio_url)}">
-        ${escapeHtml(i18n[lang].browserNoAudio)}
-      </audio>
-
-      <div class="photo-box">
-        <img src="${escapeAttr(bird.image_url)}" alt="${escapeAttr(birdName)}" loading="lazy">
-      </div>
-
-      <div class="meta">
-        ${escapeHtml(i18n[lang].source)}: ${escapeHtml(bird.credit || i18n[lang].defaultCredit)}<br>
-        <a href="${escapeAttr(bird.image_page)}" target="_blank" rel="noopener">${escapeHtml(i18n[lang].imageSource)}</a>
-        ·
-        <a href="${escapeAttr(bird.audio_page)}" target="_blank" rel="noopener">${escapeHtml(i18n[lang].audioSource)}</a>
+      <h2>${escapeHtml(getBirdName(bird))}</h2>
+      <audio controls src="${bird.audio_url}"></audio>
+      <img src="${bird.image_url}" alt="">
+      <div class="credits">
+        <a href="${bird.image_page}" target="_blank" rel="noopener noreferrer">image</a> ·
+        <a href="${bird.audio_page}" target="_blank" rel="noopener noreferrer">audio</a>
       </div>
     </div>
   `;
 }
 
-function escapeHtml(value) {
-  return String(value)
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#039;');
+function init() {
+  renderLangSwitch();
+  initTexts();
+
+  fetch(getDataUrl())
+    .then(r => r.json())
+    .then(json => {
+      data = json;
+      datasets = data.datasets || [];
+
+      const defaultId = data.default_dataset_id;
+      currentDataset =
+        datasets.find(d => d.id === defaultId) || datasets[0];
+
+      initDatasetSelect();
+      loadDataset(currentDataset.id);
+    })
+    .catch(err => {
+      console.error(err);
+      grid.innerHTML = '<p>Cannot load data.</p>';
+    });
 }
 
-function escapeAttr(value) {
-  return escapeHtml(value);
-}
+init();

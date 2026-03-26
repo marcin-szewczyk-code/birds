@@ -1,65 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>MyBirds – birds for learning</title>
-  <meta name="description" content="A simple app with a few birds for learning.">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-
-  <link rel="canonical" href="./">
-  <link rel="alternate" hreflang="pl" href="?lang=pl">
-  <link rel="alternate" hreflang="en" href="./">
-  <link rel="alternate" hreflang="x-default" href="./">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="MyBirds – birds for learning">
-  <meta property="og:description" content="A simple app with a few birds for learning.">
-  <meta property="og:url" content="./">
-
+  <meta charset="UTF-8">
+  <title>MyBirds</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-
-  <!-- GA -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYSQNLFHE6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-CYSQNLFHE6');
-  </script>
-
-  <!-- język -->
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    window.APP_LANG = params.get("lang") === "pl" ? "pl" : "en";
-  </script>
 </head>
 <body>
-  <div class="page">
-    <div class="card">
-      <header class="header">
-        <h1>MyBirds</h1>
-        <p class="intro" id="intro"></p>
 
-        <p class="lang-switch" id="langSwitch"></p>
-      </header>
+<div class="page">
+  <div class="card">
 
-      <main>
-        <section id="grid" class="grid"></section>
-
-        <section id="details" class="details empty">
-          <div class="placeholder" id="placeholder"></div>
-        </section>
-      </main>
+    <div class="header-row">
+        <h1 id="title">MyBirds</h1>
+        <div id="langSwitch" class="lang-switch"></div>
     </div>
+
+    <p id="intro" class="intro"></p>
+
+    <div class="top-bar">
+
+      <div class="dataset-switch">
+        <select id="datasetSelect"></select>
+      </div>
+    </div>
+
+    <div id="datasetDesc" class="dataset-desc"></div>
+
+    <div id="grid" class="grid"></div>
+
+    <div id="details" class="details">
+      <p id="placeholder"></p>
+    </div>
+
   </div>
 
-  <script src="app.js"></script>
-
   <footer class="footer">
-    © 2026 Marcin Szewczyk ·
-    <a href="https://marcinszewczyk.net">marcinszewczyk.net</a>
+    © 2026 Marcin Szewczyk · <a href="https://marcinszewczyk.net" target="_blank">marcinszewczyk.net</a>
   </footer>
+</div>
+
+<script src="app.js"></script>
 </body>
 </html>
