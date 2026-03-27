@@ -40,7 +40,15 @@
           "audio_path": "podlasie-poludniowe/kos.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Common_Blackbird_by_David_Friel.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:Common_Blackbird_song_(Turdus_merula).ogg",
-          "credit": "Wikimedia Commons"
+          "credit": "Wikimedia Commons",
+          "image_author": "David Friel",
+          "image_license": "CC BY 2.0",
+          "image_license_url": "https://creativecommons.org/licenses/by/2.0/",
+          "image_commercial_use": true,
+          "audio_author": "Diana Tudor",
+          "audio_license": "CC BY 4.0",
+          "audio_license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "audio_commercial_use": true
         },
         {
           "id": "rudzik",
@@ -50,7 +58,15 @@
           "audio_path": "podlasie-poludniowe/rudzik.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:European_robin_(Erithacus_rubecula).jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:European_Robin_(Erithacus_rubecula)_(W1CDR0001425_BD16).ogg",
-          "credit": "Wikimedia Commons"
+          "credit": "Wikimedia Commons",
+          "image_author": "Charles J. Sharp",
+          "image_license": "CC BY-SA 4.0",
+          "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "image_commercial_use": true,
+          "audio_author": "Lawrence Shove",
+          "audio_license": "CC BY-SA 4.0",
+          "audio_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "audio_commercial_use": true
         },
         {
           "id": "zieba",
@@ -60,7 +76,15 @@
           "audio_path": "podlasie-poludniowe/zieba.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_male.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_song.ogg",
-          "credit": "Wikimedia Commons"
+          "credit": "Wikimedia Commons",
+          "image_author": "Venenifer",
+          "image_license": "CC BY-SA 3.0",
+          "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "image_commercial_use": true,
+          "audio_author": "Amada44",
+          "audio_license": "CC BY 3.0",
+          "audio_license_url": "https://creativecommons.org/licenses/by/3.0/",
+          "audio_commercial_use": true
         },
         {
           "id": "bogatka",
@@ -70,7 +94,15 @@
           "audio_path": "podlasie-poludniowe/bogatka.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Great_tit_side-on.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:Great_Tit_(Parus_major)_(W1CDR0001393_BD1).ogg",
-          "credit": "Wikimedia Commons"
+          "credit": "Wikimedia Commons",
+          "image_author": "Francis C. Franklin",
+          "image_license": "CC BY-SA 3.0",
+          "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "image_commercial_use": true,
+          "audio_author": "Lawrence Shove",
+          "audio_license": "CC BY-SA 4.0",
+          "audio_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "audio_commercial_use": true
         },
         {
           "id": "modraszka",
@@ -80,7 +112,15 @@
           "audio_path": "podlasie-poludniowe/modraszka.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Eurasian_blue_tit_2022_04_30.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:Cyanistes_caeruleus_-_Eurasian_Blue_Tit_XC125793.ogg",
-          "credit": "Wikimedia Commons"
+          "credit": "Wikimedia Commons",
+          "image_author": "Alexis Lours",
+          "image_license": "CC BY 4.0",
+          "image_license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "image_commercial_use": true,
+          "audio_author": "Dan Stowell",
+          "audio_license": "CC BY-SA 3.0",
+          "audio_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "audio_commercial_use": true
         },
         {
           "id": "kowalik",
@@ -90,7 +130,15 @@
           "audio_path": "podlasie-poludniowe/kowalik.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Sitta_europaea_wildlife_3.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:Sitta_europaea.ogg",
-          "credit": "Wikimedia Commons"
+          "credit": "Wikimedia Commons",
+          "image_author": "Paweł Kuźniar",
+          "image_license": "CC BY-SA 3.0",
+          "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "image_commercial_use": true,
+          "audio_author": "Vladimir Yu. Arkhipov, Arkhivov",
+          "audio_license": "CC BY-SA 3.0",
+          "audio_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "audio_commercial_use": true
         }
       ]
     },
@@ -114,7 +162,15 @@
           "audio_path": "beskid-niski/orlik-krzykliwy.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Clanga_pomarina,_Belarus_1.jpg",
           "audio_page": "https://xeno-canto.org/102843",
-          "credit": "Wikimedia Commons / Xeno-canto"
+          "credit": "Wikimedia Commons / Xeno-canto",
+          "image_author": "Ron Knight",
+          "image_license": "CC BY 2.0",
+          "image_license_url": "https://creativecommons.org/licenses/by/2.0/",
+          "image_commercial_use": true,
+          "audio_author": "Jarek Matusiak",
+          "audio_license": "CC BY-NC-ND 2.5",
+          "audio_license_url": "https://creativecommons.org/licenses/by-nc-nd/2.5/",
+          "audio_commercial_use": false
         },
         {
           "id": "myszolow",
@@ -124,7 +180,15 @@
           "audio_path": "beskid-niski/myszolow.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Buteo_buteo.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:Buteo_buteo_warning_the_fledglings_7643.ogg",
-          "credit": "Wikimedia Commons"
+          "credit": "Wikimedia Commons",
+          "image_author": "Lanzi (H. Hoffmeister credited in description)",
+          "image_license": "CC BY-SA 3.0",
+          "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "image_commercial_use": true,
+          "audio_author": "T.Voekler",
+          "audio_license": "CC BY-SA 3.0",
+          "audio_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "audio_commercial_use": true
         },
         {
           "id": "puszczyk-uralski",
@@ -134,7 +198,15 @@
           "audio_path": "beskid-niski/puszczyk-uralski.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Strix_uralensis.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:DM550173_Ural_owl_male_and_female_territorial_calls.ogg",
-          "credit": "Wikimedia Commons"
+          "credit": "Wikimedia Commons",
+          "image_author": "Hans Hillewaert",
+          "image_license": "CC BY-SA 3.0",
+          "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "image_commercial_use": true,
+          "audio_author": "SanoAK: Alexander Kürthy",
+          "audio_license": "CC BY-SA 4.0",
+          "audio_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "audio_commercial_use": true
         },
         {
           "id": "puchacz",
@@ -144,7 +216,15 @@
           "audio_path": "beskid-niski/puchacz.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Bubo_bubo.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:BuboBuboMariankaSlovakia2012.ogg",
-          "credit": "Wikimedia Commons"
+          "credit": "Wikimedia Commons",
+          "image_author": "Adam Kumiszcza",
+          "image_license": "CC BY 3.0",
+          "image_license_url": "https://creativecommons.org/licenses/by/3.0/",
+          "image_commercial_use": true,
+          "audio_author": "Michal Noga",
+          "audio_license": "CC BY-SA 4.0",
+          "audio_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "audio_commercial_use": true
         },
         {
           "id": "bocian-czarny",
@@ -154,7 +234,15 @@
           "audio_path": "beskid-niski/bocian-czarny.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Ciconia_nigra.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:Black_stork.ogg",
-          "credit": "Wikimedia Commons"
+          "credit": "Wikimedia Commons",
+          "image_author": "J. Patrick Fischer",
+          "image_license": "CC BY-SA 2.5",
+          "image_license_url": "https://creativecommons.org/licenses/by-sa/2.5/",
+          "image_commercial_use": true,
+          "audio_author": "Jamescandless",
+          "audio_license": "CC BY-SA 3.0",
+          "audio_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "audio_commercial_use": true
         },
         {
           "id": "gil",
@@ -164,7 +252,15 @@
           "audio_path": "beskid-niski/gil.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Pyrrhula_pyrrhula.JPG",
           "audio_page": "https://commons.wikimedia.org/wiki/File:Bullfinch_(Pyrrhula_pyrrhula)_(W1CDR0001509_BD14).ogg",
-          "credit": "Wikimedia Commons"
+          "credit": "Wikimedia Commons",
+          "image_author": "Arnstein Rønning",
+          "image_license": "CC BY 3.0",
+          "image_license_url": "https://creativecommons.org/licenses/by/3.0/",
+          "image_commercial_use": true,
+          "audio_author": "Aubrey John Williams",
+          "audio_license": "CC BY-SA 4.0",
+          "audio_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "audio_commercial_use": true
         },
         {
           "id": "dzieciol-duzy",
@@ -174,7 +270,15 @@
           "audio_path": "beskid-niski/dzieciol-duzy.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major.ogg",
-          "credit": "Wikimedia Commons"
+          "credit": "Wikimedia Commons",
+          "image_author": "Wojsyl",
+          "image_license": "CC BY-SA 3.0",
+          "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "image_commercial_use": true,
+          "audio_author": "Vladimir Yu. Arkhipov, Arkhivov",
+          "audio_license": "CC BY-SA 3.0",
+          "audio_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "audio_commercial_use": true
         },
         {
           "id": "dzieciol-zielony",
@@ -184,7 +288,15 @@
           "audio_path": "beskid-niski/dzieciol-zielony.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Picus_viridis.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:Picus_viridis-Clapiers_2018_04_21.ogg",
-          "credit": "Wikimedia Commons"
+          "credit": "Wikimedia Commons",
+          "image_author": "MilanIlic553",
+          "image_license": "CC0 1.0",
+          "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "image_commercial_use": true,
+          "audio_author": "Manudouz",
+          "audio_license": "CC BY-SA 4.0",
+          "audio_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "audio_commercial_use": true
         },
         {
           "id": "derkacz",
@@ -194,7 +306,15 @@
           "audio_path": "beskid-niski/derkacz.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Crex_crex.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:Crex_crex.ogg",
-          "credit": "Wikimedia Commons"
+          "credit": "Wikimedia Commons",
+          "image_author": "Ivan Medenica",
+          "image_license": "CC BY-SA 4.0",
+          "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "image_commercial_use": true,
+          "audio_author": "Hannu",
+          "audio_license": "Public Domain",
+          "audio_license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "audio_commercial_use": true
         },
         {
           "id": "dzierzba-gasiorek",
@@ -204,9 +324,19 @@
           "audio_path": "beskid-niski/dzierzba-gasiorek.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Lanius_collurio.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:Lanius_collurio_(Rotr%C3%BCckenw%C3%BCrger_-_Neunt%C3%B6ter_-_Red-backed_Shrike).ogg",
-          "credit": "Wikimedia Commons"
+          "credit": "Wikimedia Commons",
+          "image_author": "Tomas Čekanavičius",
+          "image_license": "CC BY-SA 3.0",
+          "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "image_commercial_use": true,
+          "audio_author": "Feirefis",
+          "audio_license": "CC BY-SA 4.0",
+          "audio_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "audio_commercial_use": true
         }
       ]
     }
-  ]
+  ],
+  "_license_enrichment_note": "License and author fields were added from the source pages referenced in image_page and audio_page.",
+  "_license_enrichment_date": "2026-03-27"
 }
