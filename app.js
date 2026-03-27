@@ -16,6 +16,9 @@ let datasets = [];
 let currentDataset = null;
 let birds = [];
 
+const STORAGE_LANG = 'mybirds_lang';
+const STORAGE_DATASET = 'mybirds_dataset';
+
 const text = {
   pl: {
     intro: 'Wybierz region, a następnie kliknij ptaka.',
@@ -39,6 +42,11 @@ function escapeHtml(str) {
 }
 
 function getLang() {
+  const saved = localStorage.getItem(STORAGE_LANG);
+  if (saved === 'pl' || saved === 'en') {
+    return saved;
+  }
+
   const params = new URLSearchParams(window.location.search);
   return params.get('lang') === 'pl' ? 'pl' : 'en';
 }
@@ -46,9 +54,25 @@ function getLang() {
 let lang = getLang();
 
 function setLang(newLang) {
-  const params = new URLSearchParams(window.location.search);
-  params.set('lang', newLang);
-  window.location.search = params.toString();
+  lang = newLang;
+  localStorage.setItem(STORAGE_LANG, newLang);
+
+  renderLangSwitch();
+  initTexts();
+  initDatasetSelect();
+  renderDatasetDescription();
+  renderGrid();
+
+  if (activeBirdId) {
+    const activeBird = birds.find(bird => bird.id === activeBirdId);
+    if (activeBird) {
+      showDetails(activeBird);
+    } else {
+      renderRegionView();
+    }
+  } else {
+    renderRegionView();
+  }
 }
 
 function renderLangSwitch() {
@@ -85,9 +109,9 @@ function initTexts() {
   const pageTitle = document.getElementById('pageTitle');
 
   titleEl.textContent =
-  lang === 'pl'
-    ? 'MyBirds – Nauka Ptaków'
-    : 'MyBirds – Bird Learning';
+    lang === 'pl'
+      ? 'MyBirds – Nauka Ptaków'
+      : 'MyBirds – Bird Learning';
 
   if (pageTitle) {
     pageTitle.textContent =
@@ -137,14 +161,18 @@ function renderRegionView() {
   `;
 }
 
+function resolveMedia(path) {
+  return `data/${path}`;
+}
+
 function showDetails(bird) {
   const sourceLabel = lang === 'pl' ? 'Źródło:' : 'Source:';
 
   details.innerHTML = `
     <div class="details-card">
       <h2>${escapeHtml(getBirdName(bird))}</h2>
-      <audio controls src="${bird.audio_url}"></audio>
-      <img src="${bird.image_url}" alt="">
+      <audio controls src="${resolveMedia(bird.audio_path)}"></audio>
+      <img src="${resolveMedia(bird.image_path)}" alt="">
       <div class="credits">
         <span class="credits-label">${sourceLabel}</span>
         <a href="${bird.image_page}" target="_blank" rel="noopener noreferrer">image</a> ·
@@ -196,6 +224,7 @@ function initDatasetSelect() {
   datasetSelect.value = currentDataset.id;
 
   datasetSelect.onchange = () => {
+    localStorage.setItem(STORAGE_DATASET, datasetSelect.value);
     loadDataset(datasetSelect.value);
   };
 }
@@ -236,9 +265,13 @@ function init() {
       data = json;
       datasets = data.datasets || [];
 
+      const savedDatasetId = localStorage.getItem(STORAGE_DATASET);
       const defaultId = data.default_dataset_id;
+
       currentDataset =
-        datasets.find(d => d.id === defaultId) || datasets[0];
+        datasets.find(d => d.id === savedDatasetId) ||
+        datasets.find(d => d.id === defaultId) ||
+        datasets[0];
 
       initDatasetSelect();
       loadDataset(currentDataset.id);
