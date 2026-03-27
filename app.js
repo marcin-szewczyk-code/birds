@@ -144,9 +144,54 @@ function renderDatasetDescription() {
   datasetDesc.textContent = description;
 }
 
+function formatCoords(ds) {
+  const lat =
+    ds?.latitude ??
+    ds?.lat ??
+    ds?.coords?.lat ??
+    ds?.coordinates?.lat ??
+    ds?.geo?.lat;
+
+  const lon =
+    ds?.longitude ??
+    ds?.lng ??
+    ds?.lon ??
+    ds?.coords?.lon ??
+    ds?.coords?.lng ??
+    ds?.coordinates?.lon ??
+    ds?.coordinates?.lng ??
+    ds?.geo?.lon ??
+    ds?.geo?.lng;
+
+  if (lat == null || lon == null) {
+    return '';
+  }
+
+  return `${lat}, ${lon}`;
+}
+
+function formatCoords(lat, lon) {
+  if (lat == null || lon == null) return '';
+
+  const latAbs = Math.abs(lat).toFixed(2);
+  const lonAbs = Math.abs(lon).toFixed(2);
+
+  const latDir = lat >= 0 ? 'N' : 'S';
+  const lonDir = lon >= 0 ? 'E' : 'W';
+
+  return `${latAbs}°${latDir}, ${lonAbs}°${lonDir}`;
+}
+
 function renderRegionView() {
   const mapImage = currentDataset?.map?.image || '';
   const mapLicense = data?.map_base?.license || '';
+
+  const countryLabel = lang === 'pl' ? 'Polska' : 'Poland';
+
+  const lat = currentDataset?.map?.lat;
+  const lon = currentDataset?.map?.lon;
+
+  const coords = formatCoords(lat, lon);
 
   if (!mapImage) {
     details.innerHTML = `<p>${text[lang].choose}</p>`;
@@ -154,11 +199,14 @@ function renderRegionView() {
   }
 
   details.innerHTML = `
-    <div class="details-card">
-      <img src="${mapImage}" alt="">
-      <div class="map-credit">${escapeHtml(mapLicense)}</div>
-    </div>
-  `;
+  <div class="details-card">
+    <h2>
+      ${escapeHtml(countryLabel)}${coords ? ', ' + escapeHtml(coords) : ''}
+    </h2>
+    <img src="${mapImage}" alt="">
+    <div class="map-credit">${escapeHtml(mapLicense)}</div>
+  </div>
+`;
 }
 
 function resolveMedia(path) {
