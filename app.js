@@ -19,6 +19,8 @@ let birds = [];
 const STORAGE_LANG = 'mybirds_lang';
 const STORAGE_DATASET = 'mybirds_dataset';
 
+let lang = getLang();
+
 const text = {
   pl: {
     intro: 'Wybierz region, a następnie kliknij ptaka.',
@@ -50,8 +52,6 @@ function getLang() {
   const params = new URLSearchParams(window.location.search);
   return params.get('lang') === 'pl' ? 'pl' : 'en';
 }
-
-let lang = getLang();
 
 function setLang(newLang) {
   lang = newLang;
@@ -144,32 +144,6 @@ function renderDatasetDescription() {
   datasetDesc.textContent = description;
 }
 
-function formatCoords(ds) {
-  const lat =
-    ds?.latitude ??
-    ds?.lat ??
-    ds?.coords?.lat ??
-    ds?.coordinates?.lat ??
-    ds?.geo?.lat;
-
-  const lon =
-    ds?.longitude ??
-    ds?.lng ??
-    ds?.lon ??
-    ds?.coords?.lon ??
-    ds?.coords?.lng ??
-    ds?.coordinates?.lon ??
-    ds?.coordinates?.lng ??
-    ds?.geo?.lon ??
-    ds?.geo?.lng;
-
-  if (lat == null || lon == null) {
-    return '';
-  }
-
-  return `${lat}, ${lon}`;
-}
-
 function formatCoords(lat, lon) {
   if (lat == null || lon == null) return '';
 
@@ -184,7 +158,10 @@ function formatCoords(lat, lon) {
 
 function renderRegionView() {
   const mapImage = currentDataset?.map?.image || '';
-  const mapLicense = data?.map_base?.license || '';
+  const mapLicense =
+    lang === 'pl'
+      ? 'Źródło: <a class="credits" href="https://commons.wikimedia.org/wiki/File:Relief_Map_of_Poland.png" target="_blank" rel="noopener noreferrer">link</a>'
+      : 'Source: <a class="credits" href="https://commons.wikimedia.org/wiki/File:Relief_Map_of_Poland.png" target="_blank" rel="noopener noreferrer">link</a>';
 
   const countryLabel = lang === 'pl' ? 'Polska' : 'Poland';
 
@@ -204,7 +181,7 @@ function renderRegionView() {
       ${escapeHtml(countryLabel)}${coords ? ', ' + escapeHtml(coords) : ''}
     </h2>
     <img src="${mapImage}" alt="">
-    <div class="map-credit">${escapeHtml(mapLicense)}</div>
+    <div class="map-credit">${mapLicense}</div>
   </div>
 `;
 }
