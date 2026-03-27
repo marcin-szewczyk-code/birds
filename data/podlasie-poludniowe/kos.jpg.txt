@@ -1,0 +1,11 @@
+Bird ID: kos
+Bird name (PL): Kos
+Bird name (EN): Blackbird
+Dataset: podlasie-poludniowe
+
+TYPE: image
+Local file: kos.jpg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/Common%20Blackbird%20by%20David%20Friel.jpg
+Source page: https://commons.wikimedia.org/wiki/File:Common_Blackbird_by_David_Friel.jpg
+Credit: Wikimedia Commons

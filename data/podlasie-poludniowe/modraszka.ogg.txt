@@ -1,0 +1,11 @@
+Bird ID: modraszka
+Bird name (PL): Modraszka
+Bird name (EN): Blue Tit
+Dataset: podlasie-poludniowe
+
+TYPE: audio
+Local file: modraszka.ogg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/Cyanistes%20caeruleus%20-%20Eurasian%20Blue%20Tit%20XC125793.ogg
+Source page: https://commons.wikimedia.org/wiki/File:Cyanistes_caeruleus_-_Eurasian_Blue_Tit_XC125793.ogg
+Credit: Wikimedia Commons

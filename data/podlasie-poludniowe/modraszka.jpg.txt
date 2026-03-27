@@ -1,0 +1,11 @@
+Bird ID: modraszka
+Bird name (PL): Modraszka
+Bird name (EN): Blue Tit
+Dataset: podlasie-poludniowe
+
+TYPE: image
+Local file: modraszka.jpg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/Eurasian%20blue%20tit%202022%2004%2030.jpg
+Source page: https://commons.wikimedia.org/wiki/File:Eurasian_blue_tit_2022_04_30.jpg
+Credit: Wikimedia Commons

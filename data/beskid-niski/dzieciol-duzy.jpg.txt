@@ -1,0 +1,11 @@
+Bird ID: dzieciol-duzy
+Bird name (PL): Dzięcioł duży
+Bird name (EN): Great Spotted Woodpecker
+Dataset: beskid-niski
+
+TYPE: image
+Local file: dzieciol-duzy.jpg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/Dendrocopos%20major.jpg
+Source page: https://commons.wikimedia.org/wiki/File:Dendrocopos_major.jpg
+Credit: Wikimedia Commons

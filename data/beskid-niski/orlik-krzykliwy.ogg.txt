@@ -1,0 +1,11 @@
+Bird ID: orlik-krzykliwy
+Bird name (PL): Orlik krzykliwy
+Bird name (EN): Lesser Spotted Eagle
+Dataset: beskid-niski
+
+TYPE: audio
+Local file: orlik-krzykliwy.ogg
+
+Source URL: https://xeno-canto.org/102843/download
+Source page: https://xeno-canto.org/102843
+Credit: Wikimedia Commons / Xeno-canto

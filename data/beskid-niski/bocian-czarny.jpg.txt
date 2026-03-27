@@ -1,0 +1,11 @@
+Bird ID: bocian-czarny
+Bird name (PL): Bocian czarny
+Bird name (EN): Black Stork
+Dataset: beskid-niski
+
+TYPE: image
+Local file: bocian-czarny.jpg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/Ciconia%20nigra.jpg
+Source page: https://commons.wikimedia.org/wiki/File:Ciconia_nigra.jpg
+Credit: Wikimedia Commons

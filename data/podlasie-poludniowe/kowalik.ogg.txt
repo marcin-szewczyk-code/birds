@@ -1,0 +1,11 @@
+Bird ID: kowalik
+Bird name (PL): Kowalik
+Bird name (EN): Nuthatch
+Dataset: podlasie-poludniowe
+
+TYPE: audio
+Local file: kowalik.ogg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/Sitta%20europaea.ogg
+Source page: https://commons.wikimedia.org/wiki/File:Sitta_europaea.ogg
+Credit: Wikimedia Commons

@@ -1,0 +1,11 @@
+Bird ID: derkacz
+Bird name (PL): Derkacz
+Bird name (EN): Corn Crake
+Dataset: beskid-niski
+
+TYPE: image
+Local file: derkacz.jpg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/Crex%20crex.jpg
+Source page: https://commons.wikimedia.org/wiki/File:Crex_crex.jpg
+Credit: Wikimedia Commons

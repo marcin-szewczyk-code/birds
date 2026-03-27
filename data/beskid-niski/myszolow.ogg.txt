@@ -1,0 +1,11 @@
+Bird ID: myszolow
+Bird name (PL): Myszołów
+Bird name (EN): Common Buzzard
+Dataset: beskid-niski
+
+TYPE: audio
+Local file: myszolow.ogg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/Buteo_buteo_warning_the_fledglings_7643.ogg
+Source page: https://commons.wikimedia.org/wiki/File:Buteo_buteo_warning_the_fledglings_7643.ogg
+Credit: Wikimedia Commons

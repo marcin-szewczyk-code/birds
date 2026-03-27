@@ -1,0 +1,11 @@
+Bird ID: puszczyk-uralski
+Bird name (PL): Puszczyk uralski
+Bird name (EN): Ural Owl
+Dataset: beskid-niski
+
+TYPE: image
+Local file: puszczyk-uralski.jpg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/Strix%20uralensis.jpg
+Source page: https://commons.wikimedia.org/wiki/File:Strix_uralensis.jpg
+Credit: Wikimedia Commons

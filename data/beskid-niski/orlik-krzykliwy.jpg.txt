@@ -1,0 +1,11 @@
+Bird ID: orlik-krzykliwy
+Bird name (PL): Orlik krzykliwy
+Bird name (EN): Lesser Spotted Eagle
+Dataset: beskid-niski
+
+TYPE: image
+Local file: orlik-krzykliwy.jpg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/Clanga_pomarina%2C_Belarus_1.jpg
+Source page: https://commons.wikimedia.org/wiki/File:Clanga_pomarina,_Belarus_1.jpg
+Credit: Wikimedia Commons / Xeno-canto

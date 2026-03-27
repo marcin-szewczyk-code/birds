@@ -11,7 +11,6 @@
   "updated_at": "2026-03-26",
   "license_pl": "Metadane: Marcin Szewczyk. Licencje mediów podane przy każdym elemencie.",
   "license_en": "Metadata by Marcin Szewczyk. Media licenses are defined per item.",
-
   "map_base": {
     "image": "assets/relief_map_of_poland.png",
     "source": "Relief Map of Poland",
@@ -20,7 +19,6 @@
     "license": "CC BY-SA 3.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/3.0/"
   },
-
   "datasets": [
     {
       "id": "podlasie-poludniowe",
@@ -30,7 +28,7 @@
       "description_en": "A bird set for Southern Podlasie.",
       "map": {
         "image": "maps/podlasie-poludniowe.png",
-        "lat": 52.032500,
+        "lat": 52.0325,
         "lon": 23.116389
       },
       "birds": [
@@ -38,8 +36,8 @@
           "id": "kos",
           "name_pl": "Kos",
           "name_en": "Blackbird",
-          "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Common%20Blackbird%20by%20David%20Friel.jpg",
-          "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Common%20Blackbird%20song%20%28Turdus%20merula%29.ogg",
+          "image_url": "podlasie-poludniowe/kos.jpg",
+          "audio_url": "podlasie-poludniowe/kos.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Common_Blackbird_by_David_Friel.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:Common_Blackbird_song_(Turdus_merula).ogg",
           "credit": "Wikimedia Commons"
@@ -48,8 +46,8 @@
           "id": "rudzik",
           "name_pl": "Rudzik",
           "name_en": "Robin",
-          "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/European%20robin%20%28Erithacus%20rubecula%29.jpg",
-          "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/European%20Robin%20%28Erithacus%20rubecula%29%20%28W1CDR0001425%20BD16%29.ogg",
+          "image_url": "podlasie-poludniowe/rudzik.jpg",
+          "audio_url": "podlasie-poludniowe/rudzik.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:European_robin_(Erithacus_rubecula).jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:European_Robin_(Erithacus_rubecula)_(W1CDR0001425_BD16).ogg",
           "credit": "Wikimedia Commons"
@@ -58,8 +56,8 @@
           "id": "zieba",
           "name_pl": "Zięba",
           "name_en": "Chaffinch",
-          "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Fringilla%20coelebs%20male.jpg",
-          "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Fringilla%20coelebs%20song.ogg",
+          "image_url": "podlasie-poludniowe/zieba.jpg",
+          "audio_url": "podlasie-poludniowe/zieba.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_male.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_song.ogg",
           "credit": "Wikimedia Commons"
@@ -68,8 +66,8 @@
           "id": "bogatka",
           "name_pl": "Bogatka",
           "name_en": "Great Tit",
-          "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Great%20tit%20side-on.jpg",
-          "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Great%20Tit%20%28Parus%20major%29%20%28W1CDR0001393%20BD1%29.ogg",
+          "image_url": "podlasie-poludniowe/bogatka.jpg",
+          "audio_url": "podlasie-poludniowe/bogatka.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Great_tit_side-on.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:Great_Tit_(Parus_major)_(W1CDR0001393_BD1).ogg",
           "credit": "Wikimedia Commons"
@@ -78,8 +76,8 @@
           "id": "modraszka",
           "name_pl": "Modraszka",
           "name_en": "Blue Tit",
-          "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Eurasian%20blue%20tit%202022%2004%2030.jpg",
-          "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cyanistes%20caeruleus%20-%20Eurasian%20Blue%20Tit%20XC125793.ogg",
+          "image_url": "podlasie-poludniowe/modraszka.jpg",
+          "audio_url": "podlasie-poludniowe/modraszka.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Eurasian_blue_tit_2022_04_30.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:Cyanistes_caeruleus_-_Eurasian_Blue_Tit_XC125793.ogg",
           "credit": "Wikimedia Commons"
@@ -88,8 +86,8 @@
           "id": "kowalik",
           "name_pl": "Kowalik",
           "name_en": "Nuthatch",
-          "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sitta%20europaea%20wildlife%203.jpg",
-          "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sitta%20europaea.ogg",
+          "image_url": "podlasie-poludniowe/kowalik.jpg",
+          "audio_url": "podlasie-poludniowe/kowalik.ogg",
           "image_page": "https://commons.wikimedia.org/wiki/File:Sitta_europaea_wildlife_3.jpg",
           "audio_page": "https://commons.wikimedia.org/wiki/File:Sitta_europaea.ogg",
           "credit": "Wikimedia Commons"
@@ -104,110 +102,110 @@
       "description_en": "A bird set for the Low Beskids.",
       "map": {
         "image": "maps/beskid-niski.png",
-        "lat": 49.500000,
+        "lat": 49.5,
         "lon": 21.333333
       },
       "birds": [
-{
-  "id": "orlik-krzykliwy",
-  "name_pl": "Orlik krzykliwy",
-  "name_en": "Lesser Spotted Eagle",
-  "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Clanga_pomarina%2C_Belarus_1.jpg",
-  "audio_url": "https://xeno-canto.org/102843/download",
-  "image_page": "https://commons.wikimedia.org/wiki/File:Clanga_pomarina,_Belarus_1.jpg",
-  "audio_page": "https://xeno-canto.org/102843",
-  "credit": "Wikimedia Commons / Xeno-canto"
-},
-{
-  "id": "myszolow",
-  "name_pl": "Myszołów",
-  "name_en": "Common Buzzard",
-  "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Buteo%20buteo.jpg",
-  "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Buteo_buteo_warning_the_fledglings_7643.ogg",
-  "image_page": "https://commons.wikimedia.org/wiki/File:Buteo_buteo.jpg",
-  "audio_page": "https://commons.wikimedia.org/wiki/File:Buteo_buteo_warning_the_fledglings_7643.ogg",
-  "credit": "Wikimedia Commons"
-},
-{
-  "id": "puszczyk-uralski",
-  "name_pl": "Puszczyk uralski",
-  "name_en": "Ural Owl",
-  "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Strix%20uralensis.jpg",
-  "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/DM550173%20Ural%20owl%20male%20and%20female%20territorial%20calls.ogg",
-  "image_page": "https://commons.wikimedia.org/wiki/File:Strix_uralensis.jpg",
-  "audio_page": "https://commons.wikimedia.org/wiki/File:DM550173_Ural_owl_male_and_female_territorial_calls.ogg",
-  "credit": "Wikimedia Commons"
-},
-{
-  "id": "puchacz",
-  "name_pl": "Puchacz",
-  "name_en": "Eurasian Eagle-Owl",
-  "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bubo%20bubo.jpg",
-  "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/BuboBuboMariankaSlovakia2012.ogg",
-  "image_page": "https://commons.wikimedia.org/wiki/File:Bubo_bubo.jpg",
-  "audio_page": "https://commons.wikimedia.org/wiki/File:BuboBuboMariankaSlovakia2012.ogg",
-  "credit": "Wikimedia Commons"
-},
-{
-  "id": "bocian-czarny",
-  "name_pl": "Bocian czarny",
-  "name_en": "Black Stork",
-  "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ciconia%20nigra.jpg",
-  "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Black%20stork.ogg",
-  "image_page": "https://commons.wikimedia.org/wiki/File:Ciconia_nigra.jpg",
-  "audio_page": "https://commons.wikimedia.org/wiki/File:Black_stork.ogg",
-  "credit": "Wikimedia Commons"
-},
-{
-  "id": "gil",
-  "name_pl": "Gil",
-  "name_en": "Bullfinch",
-  "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pyrrhula_pyrrhula.JPG",
-  "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bullfinch_%28Pyrrhula_pyrrhula%29_%28W1CDR0001509_BD14%29.ogg",
-  "image_page": "https://commons.wikimedia.org/wiki/File:Pyrrhula_pyrrhula.JPG",
-  "audio_page": "https://commons.wikimedia.org/wiki/File:Bullfinch_(Pyrrhula_pyrrhula)_(W1CDR0001509_BD14).ogg",
-  "credit": "Wikimedia Commons"
-},
-{
-  "id": "dzieciol-duzy",
-  "name_pl": "Dzięcioł duży",
-  "name_en": "Great Spotted Woodpecker",
-  "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dendrocopos%20major.jpg",
-  "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dendrocopos%20major.ogg",
-  "image_page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major.jpg",
-  "audio_page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major.ogg",
-  "credit": "Wikimedia Commons"
-},
-{
-  "id": "dzieciol-zielony",
-  "name_pl": "Dzięcioł zielony",
-  "name_en": "European Green Woodpecker",
-  "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Picus%20viridis.jpg",
-  "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Picus_viridis-Clapiers_2018_04_21.ogg",
-  "image_page": "https://commons.wikimedia.org/wiki/File:Picus_viridis.jpg",
-  "audio_page": "https://commons.wikimedia.org/wiki/File:Picus_viridis-Clapiers_2018_04_21.ogg",
-  "credit": "Wikimedia Commons"
-},
-{
-  "id": "derkacz",
-  "name_pl": "Derkacz",
-  "name_en": "Corn Crake",
-  "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Crex%20crex.jpg",
-  "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Crex%20crex.ogg",
-  "image_page": "https://commons.wikimedia.org/wiki/File:Crex_crex.jpg",
-  "audio_page": "https://commons.wikimedia.org/wiki/File:Crex_crex.ogg",
-  "credit": "Wikimedia Commons"
-},
-{
-  "id": "dzierzba-gasiorek",
-  "name_pl": "Dzierzba gąsiorek",
-  "name_en": "Red-backed Shrike",
-  "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lanius%20collurio.jpg",
-  "audio_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lanius_collurio_%28Rotr%C3%BCckenw%C3%BCrger_-_Neunt%C3%B6ter_-_Red-backed_Shrike%29.ogg",
-  "image_page": "https://commons.wikimedia.org/wiki/File:Lanius_collurio.jpg",
-  "audio_page": "https://commons.wikimedia.org/wiki/File:Lanius_collurio_(Rotr%C3%BCckenw%C3%BCrger_-_Neunt%C3%B6ter_-_Red-backed_Shrike).ogg",
-  "credit": "Wikimedia Commons"
-}
+        {
+          "id": "orlik-krzykliwy",
+          "name_pl": "Orlik krzykliwy",
+          "name_en": "Lesser Spotted Eagle",
+          "image_url": "beskid-niski/orlik-krzykliwy.jpg",
+          "audio_url": "beskid-niski/orlik-krzykliwy.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Clanga_pomarina,_Belarus_1.jpg",
+          "audio_page": "https://xeno-canto.org/102843",
+          "credit": "Wikimedia Commons / Xeno-canto"
+        },
+        {
+          "id": "myszolow",
+          "name_pl": "Myszołów",
+          "name_en": "Common Buzzard",
+          "image_url": "beskid-niski/myszolow.jpg",
+          "audio_url": "beskid-niski/myszolow.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Buteo_buteo.jpg",
+          "audio_page": "https://commons.wikimedia.org/wiki/File:Buteo_buteo_warning_the_fledglings_7643.ogg",
+          "credit": "Wikimedia Commons"
+        },
+        {
+          "id": "puszczyk-uralski",
+          "name_pl": "Puszczyk uralski",
+          "name_en": "Ural Owl",
+          "image_url": "beskid-niski/puszczyk-uralski.jpg",
+          "audio_url": "beskid-niski/puszczyk-uralski.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Strix_uralensis.jpg",
+          "audio_page": "https://commons.wikimedia.org/wiki/File:DM550173_Ural_owl_male_and_female_territorial_calls.ogg",
+          "credit": "Wikimedia Commons"
+        },
+        {
+          "id": "puchacz",
+          "name_pl": "Puchacz",
+          "name_en": "Eurasian Eagle-Owl",
+          "image_url": "beskid-niski/puchacz.jpg",
+          "audio_url": "beskid-niski/puchacz.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Bubo_bubo.jpg",
+          "audio_page": "https://commons.wikimedia.org/wiki/File:BuboBuboMariankaSlovakia2012.ogg",
+          "credit": "Wikimedia Commons"
+        },
+        {
+          "id": "bocian-czarny",
+          "name_pl": "Bocian czarny",
+          "name_en": "Black Stork",
+          "image_url": "beskid-niski/bocian-czarny.jpg",
+          "audio_url": "beskid-niski/bocian-czarny.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Ciconia_nigra.jpg",
+          "audio_page": "https://commons.wikimedia.org/wiki/File:Black_stork.ogg",
+          "credit": "Wikimedia Commons"
+        },
+        {
+          "id": "gil",
+          "name_pl": "Gil",
+          "name_en": "Bullfinch",
+          "image_url": "beskid-niski/gil.jpg",
+          "audio_url": "beskid-niski/gil.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Pyrrhula_pyrrhula.JPG",
+          "audio_page": "https://commons.wikimedia.org/wiki/File:Bullfinch_(Pyrrhula_pyrrhula)_(W1CDR0001509_BD14).ogg",
+          "credit": "Wikimedia Commons"
+        },
+        {
+          "id": "dzieciol-duzy",
+          "name_pl": "Dzięcioł duży",
+          "name_en": "Great Spotted Woodpecker",
+          "image_url": "beskid-niski/dzieciol-duzy.jpg",
+          "audio_url": "beskid-niski/dzieciol-duzy.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major.jpg",
+          "audio_page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major.ogg",
+          "credit": "Wikimedia Commons"
+        },
+        {
+          "id": "dzieciol-zielony",
+          "name_pl": "Dzięcioł zielony",
+          "name_en": "European Green Woodpecker",
+          "image_url": "beskid-niski/dzieciol-zielony.jpg",
+          "audio_url": "beskid-niski/dzieciol-zielony.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Picus_viridis.jpg",
+          "audio_page": "https://commons.wikimedia.org/wiki/File:Picus_viridis-Clapiers_2018_04_21.ogg",
+          "credit": "Wikimedia Commons"
+        },
+        {
+          "id": "derkacz",
+          "name_pl": "Derkacz",
+          "name_en": "Corn Crake",
+          "image_url": "beskid-niski/derkacz.jpg",
+          "audio_url": "beskid-niski/derkacz.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Crex_crex.jpg",
+          "audio_page": "https://commons.wikimedia.org/wiki/File:Crex_crex.ogg",
+          "credit": "Wikimedia Commons"
+        },
+        {
+          "id": "dzierzba-gasiorek",
+          "name_pl": "Dzierzba gąsiorek",
+          "name_en": "Red-backed Shrike",
+          "image_url": "beskid-niski/dzierzba-gasiorek.jpg",
+          "audio_url": "beskid-niski/dzierzba-gasiorek.ogg",
+          "image_page": "https://commons.wikimedia.org/wiki/File:Lanius_collurio.jpg",
+          "audio_page": "https://commons.wikimedia.org/wiki/File:Lanius_collurio_(Rotr%C3%BCckenw%C3%BCrger_-_Neunt%C3%B6ter_-_Red-backed_Shrike).ogg",
+          "credit": "Wikimedia Commons"
+        }
       ]
     }
   ]

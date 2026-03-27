@@ -1,0 +1,11 @@
+Bird ID: myszolow
+Bird name (PL): Myszołów
+Bird name (EN): Common Buzzard
+Dataset: beskid-niski
+
+TYPE: image
+Local file: myszolow.jpg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/Buteo%20buteo.jpg
+Source page: https://commons.wikimedia.org/wiki/File:Buteo_buteo.jpg
+Credit: Wikimedia Commons

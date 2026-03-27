@@ -1,0 +1,11 @@
+Bird ID: zieba
+Bird name (PL): Zięba
+Bird name (EN): Chaffinch
+Dataset: podlasie-poludniowe
+
+TYPE: image
+Local file: zieba.jpg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/Fringilla%20coelebs%20male.jpg
+Source page: https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_male.jpg
+Credit: Wikimedia Commons

@@ -1,0 +1,11 @@
+Bird ID: bogatka
+Bird name (PL): Bogatka
+Bird name (EN): Great Tit
+Dataset: podlasie-poludniowe
+
+TYPE: image
+Local file: bogatka.jpg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/Great%20tit%20side-on.jpg
+Source page: https://commons.wikimedia.org/wiki/File:Great_tit_side-on.jpg
+Credit: Wikimedia Commons

@@ -1,0 +1,11 @@
+Bird ID: gil
+Bird name (PL): Gil
+Bird name (EN): Bullfinch
+Dataset: beskid-niski
+
+TYPE: image
+Local file: gil.jpg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/Pyrrhula_pyrrhula.JPG
+Source page: https://commons.wikimedia.org/wiki/File:Pyrrhula_pyrrhula.JPG
+Credit: Wikimedia Commons

@@ -1,0 +1,11 @@
+Bird ID: kos
+Bird name (PL): Kos
+Bird name (EN): Blackbird
+Dataset: podlasie-poludniowe
+
+TYPE: audio
+Local file: kos.ogg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/Common%20Blackbird%20song%20%28Turdus%20merula%29.ogg
+Source page: https://commons.wikimedia.org/wiki/File:Common_Blackbird_song_(Turdus_merula).ogg
+Credit: Wikimedia Commons

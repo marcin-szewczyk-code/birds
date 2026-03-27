@@ -1,0 +1,11 @@
+Bird ID: puszczyk-uralski
+Bird name (PL): Puszczyk uralski
+Bird name (EN): Ural Owl
+Dataset: beskid-niski
+
+TYPE: audio
+Local file: puszczyk-uralski.ogg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/DM550173%20Ural%20owl%20male%20and%20female%20territorial%20calls.ogg
+Source page: https://commons.wikimedia.org/wiki/File:DM550173_Ural_owl_male_and_female_territorial_calls.ogg
+Credit: Wikimedia Commons

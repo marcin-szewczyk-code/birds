@@ -1,0 +1,11 @@
+Bird ID: dzierzba-gasiorek
+Bird name (PL): Dzierzba gąsiorek
+Bird name (EN): Red-backed Shrike
+Dataset: beskid-niski
+
+TYPE: audio
+Local file: dzierzba-gasiorek.ogg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/Lanius_collurio_%28Rotr%C3%BCckenw%C3%BCrger_-_Neunt%C3%B6ter_-_Red-backed_Shrike%29.ogg
+Source page: https://commons.wikimedia.org/wiki/File:Lanius_collurio_(Rotr%C3%BCckenw%C3%BCrger_-_Neunt%C3%B6ter_-_Red-backed_Shrike).ogg
+Credit: Wikimedia Commons

@@ -1,0 +1,11 @@
+Bird ID: dzieciol-zielony
+Bird name (PL): Dzięcioł zielony
+Bird name (EN): European Green Woodpecker
+Dataset: beskid-niski
+
+TYPE: image
+Local file: dzieciol-zielony.jpg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/Picus%20viridis.jpg
+Source page: https://commons.wikimedia.org/wiki/File:Picus_viridis.jpg
+Credit: Wikimedia Commons

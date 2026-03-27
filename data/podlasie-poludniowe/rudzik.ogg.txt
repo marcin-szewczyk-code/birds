@@ -1,0 +1,11 @@
+Bird ID: rudzik
+Bird name (PL): Rudzik
+Bird name (EN): Robin
+Dataset: podlasie-poludniowe
+
+TYPE: audio
+Local file: rudzik.ogg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/European%20Robin%20%28Erithacus%20rubecula%29%20%28W1CDR0001425%20BD16%29.ogg
+Source page: https://commons.wikimedia.org/wiki/File:European_Robin_(Erithacus_rubecula)_(W1CDR0001425_BD16).ogg
+Credit: Wikimedia Commons

@@ -1,0 +1,11 @@
+Bird ID: bocian-czarny
+Bird name (PL): Bocian czarny
+Bird name (EN): Black Stork
+Dataset: beskid-niski
+
+TYPE: audio
+Local file: bocian-czarny.ogg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/Black%20stork.ogg
+Source page: https://commons.wikimedia.org/wiki/File:Black_stork.ogg
+Credit: Wikimedia Commons

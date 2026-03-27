@@ -1,0 +1,11 @@
+Bird ID: puchacz
+Bird name (PL): Puchacz
+Bird name (EN): Eurasian Eagle-Owl
+Dataset: beskid-niski
+
+TYPE: audio
+Local file: puchacz.ogg
+
+Source URL: https://commons.wikimedia.org/wiki/Special:Redirect/file/BuboBuboMariankaSlovakia2012.ogg
+Source page: https://commons.wikimedia.org/wiki/File:BuboBuboMariankaSlovakia2012.ogg
+Credit: Wikimedia Commons
