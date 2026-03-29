@@ -160,8 +160,8 @@ function renderRegionView() {
   const mapImage = currentDataset?.map?.image || '';
   const mapLicense =
     lang === 'pl'
-      ? 'Źródło: <a class="credits" href="https://commons.wikimedia.org/wiki/File:Relief_Map_of_Poland.png" target="_blank" rel="noopener noreferrer">link</a>'
-      : 'Source: <a class="credits" href="https://commons.wikimedia.org/wiki/File:Relief_Map_of_Poland.png" target="_blank" rel="noopener noreferrer">link</a>';
+      ? 'Mapa: MS; dane: Natural Earth; DEM'
+      : 'Map by MS, Data: Natural Earth, DEM source';
 
   const countryLabel = lang === 'pl' ? 'Polska' : 'Poland';
 
