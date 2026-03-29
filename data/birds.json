@@ -27,7 +27,7 @@
       "description_pl": "Zestaw ptaków dla Podlasia Południowego.",
       "description_en": "A bird set for Southern Podlasie.",
       "map": {
-        "image": "maps/podlasie-poludniowe.png",
+        "image": "maps/podlasie-poludniowe.webp",
         "lat": 52.0325,
         "lon": 23.116389
       },
@@ -149,7 +149,7 @@
       "description_pl": "Zestaw ptaków dla Beskidu Niskiego.",
       "description_en": "A bird set for the Low Beskids.",
       "map": {
-        "image": "maps/beskid-niski.png",
+        "image": "maps/beskid-niski.webp",
         "lat": 49.5,
         "lon": 21.333333
       },

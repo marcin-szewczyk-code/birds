@@ -7,22 +7,13 @@ from pyproj import Transformer
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "birds.json"
 
-# Parametry mapy wyeksportowanej z QGIS
-# CRS mapy: EPSG:2180
-# Rozmiar obrazu: 1400 x 1400 px
-# Extent:
-#   X min = 120000
-#   X max = 910000
-#   Y min = 150000
-#   Y max = 870000
-
+# Parametry mapy (QGIS export, EPSG:2180)
 X_MIN = 117562.340
 X_MAX = 904492.780
 Y_MIN = 92488.200
 Y_MAX = 829015.020
 
-# Transformacja: WGS84 (lon/lat) -> EPSG:2180
-# always_xy=True oznacza: wejście podajemy jako (lon, lat)
+# Transformacja: WGS84 -> EPSG:2180
 transformer = Transformer.from_crs("EPSG:4326", "EPSG:2180", always_xy=True)
 
 
@@ -39,8 +30,7 @@ def clamp(value, min_value, max_value):
 
 
 def lonlat_to_2180(lon, lat):
-    x, y = transformer.transform(lon, lat)
-    return x, y
+    return transformer.transform(lon, lat)
 
 
 def draw_marker(draw, x, y):
@@ -66,6 +56,19 @@ def draw_marker(draw, x, y):
     )
 
 
+def save_web_only(img, out_path):
+    web_size = 800
+
+    img_web = img.resize((web_size, web_size), Image.LANCZOS)
+
+    web_out = out_path.with_suffix(".webp")
+    img_web.save(web_out, "WEBP", quality=80, method=6)
+
+    return web_out
+
+
+# --- MAIN ---
+
 with open(DATA, "r", encoding="utf-8") as f:
     data = json.load(f)
 
@@ -81,34 +84,32 @@ for dataset in data.get("datasets", []):
     out_rel = map_data.get("image")
 
     if lat is None or lon is None or not out_rel:
-        print(f"Pomijam dataset bez pełnych danych mapy: {dataset.get('id', '<brak id>')}")
+        print(f"Pomijam dataset: {dataset.get('id', '<brak id>')}")
         continue
 
     with Image.open(base_map).convert("RGBA") as img:
         draw = ImageDraw.Draw(img)
         width, height = img.size
 
-        # 1. lon/lat -> EPSG:2180
+        # --- transformacja ---
         x_map, y_map = lonlat_to_2180(lon, lat)
-
-        # 2. EPSG:2180 -> piksele obrazu
         x = x_to_px(x_map, width)
         y = y_to_px(y_map, height)
 
-        # 3. zabezpieczenie przed wyjściem poza obraz
+        # --- clamp ---
         x = clamp(x, 0, width - 1)
         y = clamp(y, 0, height - 1)
 
-        # 4. marker
+        # --- marker ---
         draw_marker(draw, x, y)
 
+        # --- zapis ---
         out = ROOT / out_rel
         out.parent.mkdir(parents=True, exist_ok=True)
-        img.save(out)
+
+        web_out = save_web_only(img, out)
 
         print(
-            f"Saved: {out} | "
-            f"lon={lon}, lat={lat} -> "
-            f"x2180={x_map:.2f}, y2180={y_map:.2f} -> "
-            f"px={x}, py={y}"
+            f"Saved: {web_out} | "
+            f"lon={lon}, lat={lat} -> px=({x},{y})"
         )
